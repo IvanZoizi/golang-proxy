@@ -1,0 +1,5 @@
+{
+  "serverPort": ":8003",
+  "appName": "Proxy",
+  "env": "development"
+}
