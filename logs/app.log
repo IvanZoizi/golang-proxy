@@ -1,0 +1,570 @@
+2026-05-13T17:20:46.345+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:21:01.475+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:21:01.504+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "ip": "127.0.0.1"}
+2026-05-13T17:34:01.682+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:34:01.711+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "ip": "127.0.0.1"}
+2026-05-13T17:34:18.783+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:34:18.783+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "ip": "127.0.0.1"}
+2026-05-13T17:35:50.750+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:35:50.781+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "path": "/admin/black", "ip": "127.0.0.1"}
+2026-05-13T17:44:59.440+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:44:59.468+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "path": "/admin/black", "ip": "127.0.0.1"}
+2026-05-13T17:54:53.024+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1"}
+2026-05-13T17:54:53.056+0400	[34mINFO[0m	logger/logger.go:49	[BLOCKED] IP	{"error": "Access denied", "message": "Your IP is blocked", "path": "/admin/black", "ip": "127.0.0.1"}
+2026-05-15T11:12:43.588+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:12:43.617+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:13:07.479+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/healt"}
+2026-05-15T11:13:35.026+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/health"}
+2026-05-15T11:13:45.844+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:16:16.374+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:16:16.404+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:16:19.052+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:16:19.052+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:16:19.052+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:308
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:265
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:16:19.053+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:16:19.053+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:16:23.574+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:16:23.574+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:16:23.574+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:308
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:265
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:16:23.574+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:16:23.574+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:17:01.613+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:17:01.643+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:17:15.853+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:17:15.853+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:17:15.853+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:308
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:265
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:17:15.854+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:17:15.854+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:18:54.220+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:18:54.249+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:19:02.745+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:19:02.745+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:19:02.745+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:62
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:309
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:266
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:19:02.746+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:19:02.746+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:20:46.674+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:20:46.674+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:20:46.674+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:62
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:309
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:266
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:20:46.675+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:20:46.675+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:21:07.571+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:21:07.601+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:21:13.041+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:21:13.042+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:21:13.042+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:63
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:310
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:267
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:21:13.042+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:21:13.042+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:21:24.575+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:21:24.604+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:21:26.261+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:21:26.261+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:21:26.261+0400	[33mWARN[0m	logger/logger.go:53	[BLOCKED] IP in blacklist	{"ip": "127.0.0.1", "path": "/admin/black"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).IPCheckMiddleware.func3
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:63
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).SubnetRateLimiterMiddleware.func2
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:310
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:267
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:21:26.261+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 403, "request_size": 27, "response_size": 73}
+2026-05-15T11:21:26.261+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:22:19.562+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:22:19.593+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:22:30.858+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:22:30.888+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:22:53.428+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:22:53.458+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:22:57.342+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:22:57.342+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:22:57.342+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/admin/black"}
+2026-05-15T11:22:57.342+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/admin/black", "status": 200, "request_size": 27, "response_size": 0}
+2026-05-15T11:22:57.343+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:09.024+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:09.024+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:09.024+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:09.024+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:09.024+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:09.024+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:10.268+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.268+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.268+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.268+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:10.268+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:10.268+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:10.938+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.938+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.938+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:10.938+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:10.938+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:10.938+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:11.457+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:11.457+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:11.457+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:11.457+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:11.457+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:11.457+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:12.040+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:12.040+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:12.041+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:12.041+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:12.041+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:12.041+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:15.589+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:15.589+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:15.589+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:15.589+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:15.589+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:15.589+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:17.252+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:17.252+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:17.252+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:17.253+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:17.253+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:17.253+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:33.817+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:23:33.846+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:23:35.525+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:35.525+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:35.525+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:35.526+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:35.526+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:35.526+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:23:36.360+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:36.360+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:36.360+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:23:36.360+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T11:23:36.360+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T11:23:36.360+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:24:38.396+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:24:38.422+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:24:44.073+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:24:44.073+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/api/black", "reason": "Rate limit exceeded: too many requests per hour"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:24:44.073+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:24:45.038+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:24:45.038+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/api/black", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04 m=+1805.681608401: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:24:45.038+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:24:45.686+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:24:45.686+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/api/black", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04 m=+1805.681608401: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:24:45.687+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:24:46.272+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T11:24:46.272+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/api/black", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04 m=+1805.681608401: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:24:46.273+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:26:12.840+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:26:12.870+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:26:53.249+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:26:53.279+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:27:42.032+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:27:42.062+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:30:18.514+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/white"}
+2026-05-15T11:30:18.514+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/api/white", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:30:18.515+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:40:51.187+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:40:51.218+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:40:51.219+0400	[31mFATAL[0m	logger/logger.go:61	Failed to start server	{"error": "listen tcp :8003: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."}
+proxy/pkg/logger.Fatal
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:61
+main.main
+	C:/Users/zooii/GolandProjects/proxy/cmd/main/main.go:57
+runtime.main
+	C:/Users/zooii/sdk/go1.25.3/src/runtime/proc.go:285
+2026-05-15T11:40:57.444+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T11:40:57.445+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/metrics", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.serveError
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:766
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:759
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:40:57.445+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:41:15.456+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:41:15.488+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:41:18.652+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T11:41:18.652+0400	[33mWARN[0m	logger/logger.go:53	Rate limit exceeded	{"ip": "127.0.0.1", "path": "/metrics", "reason": "IP blocked until 2026-05-15 11:54:44.0733022 +0400 +04: RPH limit exceeded"}
+proxy/pkg/logger.Warn
+	C:/Users/zooii/GolandProjects/proxy/pkg/logger/logger.go:53
+proxy/iternal/transport/http.SetupRoute.(*IpHandler).RateLimiterMiddleware.func1
+	C:/Users/zooii/GolandProjects/proxy/iternal/transport/http/middleware.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/zooii/go/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672
+net/http.serverHandler.ServeHTTP
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:3340
+net/http.(*conn).serve
+	C:/Users/zooii/sdk/go1.25.3/src/net/http/server.go:2109
+2026-05-15T11:41:18.652+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T11:41:33.963+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T11:41:33.993+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T11:41:37.094+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T11:41:37.095+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/metrics"}
+2026-05-15T11:41:37.095+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T11:41:37.096+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/metrics", "status": 200, "request_size": 27, "response_size": 1837}
+2026-05-15T11:41:37.096+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T12:11:33.892+0400	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8003"}
+2026-05-15T12:11:33.922+0400	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8003"}
+2026-05-15T12:11:45.520+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T12:11:45.520+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/metrics"}
+2026-05-15T12:11:45.520+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/metrics"}
+2026-05-15T12:11:45.522+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/metrics", "status": 200, "request_size": 27, "response_size": 1841}
+2026-05-15T12:11:45.522+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}
+2026-05-15T12:11:49.523+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T12:11:49.523+0400	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "127.0.0.1", "path": "/api/black"}
+2026-05-15T12:11:49.523+0400	[34mINFO[0m	logger/logger.go:49	[ALLOWED] IP in whitelist	{"ip": "127.0.0.1", "path": "/api/black"}
+2026-05-15T12:11:49.523+0400	[34mINFO[0m	logger/logger.go:49	Get IPs	{"list": "black", "count": 1}
+2026-05-15T12:11:49.523+0400	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "127.0.0.1", "path": "/api/black", "status": 200, "request_size": 27, "response_size": 46}
+2026-05-15T12:11:49.523+0400	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "127.0.0.1"}

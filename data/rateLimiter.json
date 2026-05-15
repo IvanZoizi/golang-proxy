@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "requests_per_second": 1000,
+    "requests_per_minute": 1000,
+    "requests_per_hour": 10000,
+    "requests_per_day": 100000,
+    "download_limit_mb": 100,
+    "upload_limit_mb": 50,
+    "total_traffic_mb": 150,
+    "max_concurrent_connections": 10,
+    "new_connections_per_second": 5,
+    "subnet_limits": {
+        "10.0.0.0/8": {
+            "requests_per_second": 50,
+            "requests_per_minute": 500,
+            "requests_per_hour": 5000,
+            "requests_per_day": 50000
+        },
+        "192.168.0.0/16": {
+            "requests_per_second": 20,
+            "requests_per_minute": 200,
+            "requests_per_hour": 2000,
+            "requests_per_day": 20000
+        }
+    }
+}

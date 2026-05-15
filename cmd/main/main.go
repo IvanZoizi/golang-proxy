@@ -1,31 +1,59 @@
+// cmd/main.go
 package main
 
 import (
-	"log"
-	"proxy/config"
-	"proxy/iternal/entity"
+	"go.uber.org/zap"
+	"proxy/configGolang"
 	"proxy/iternal/repository"
 	"proxy/iternal/transport/http"
 	"proxy/iternal/usecase"
+	"proxy/pkg/logger"
 )
 
 func main() {
+	cfg := configGolang.CreateConfig("./config.json")
 
-	cfg := config.CreateConfig("./config.json")
+	logger.InitLogger(cfg.Env)
+	defer logger.Sync()
 
-	whiteList := entity.CreateList("./data/whitelist.json")
-	blackList := entity.CreateList("./data/blacklist.json")
-	grayList := entity.CreateList("./data/graylist.json")
+	logger.Info("Starting application",
+		zap.String("env", cfg.Env),
+		zap.String("port", cfg.ServerPort))
 
-	whiteListRepo := repository.CreateRepository(&whiteList)
-	blackListRepo := repository.CreateRepository(&blackList)
-	grayListRepo := repository.CreateRepository(&grayList)
+	whiteListRepo, err := repository.NewListRepository("./data/whitelist.json")
+	if err != nil {
+		logger.Fatal("Failed to create white repo", zap.Error(err))
+	}
 
-	listUseCase := usecase.CreateListUseCase(whiteListRepo, blackListRepo, grayListRepo)
-	listHandler := http.CreateIpHandler(listUseCase)
+	blackListRepo, err := repository.NewListRepository("./data/blacklist.json")
+	if err != nil {
+		logger.Fatal("Failed to create black repo", zap.Error(err))
+	}
+
+	grayListRepo, err := repository.NewListRepository("./data/graylist.json")
+	if err != nil {
+		logger.Fatal("Failed to create gray repo", zap.Error(err))
+	}
+
+	rateLimiterRepo, err := repository.NewRateLimiterRepository(
+		"./data/rateLimiter.json",
+		"./data/rateLimiterData.json",
+	)
+	if err != nil {
+		logger.Fatal("Failed to create rate limiter repo", zap.Error(err))
+	}
+
+	listUseCase := usecase.CreateListUseCase(whiteListRepo, grayListRepo, blackListRepo)
+	rateLimiterUC := usecase.NewRateLimiterUseCase(rateLimiterRepo)
+
+	listHandler := http.CreateIpHandler(listUseCase, rateLimiterUC)
 
 	router := http.SetupRoute(listHandler)
+
+	logger.Info("Server starting",
+		zap.String("port", cfg.ServerPort))
+
 	if err := router.Run(cfg.ServerPort); err != nil {
-		log.Fatal("Failed to start server:", err)
+		logger.Fatal("Failed to start server", zap.Error(err))
 	}
 }

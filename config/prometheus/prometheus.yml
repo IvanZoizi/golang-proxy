@@ -1,0 +1,17 @@
+# config/prometheus/prometheus.yml
+
+global:
+  scrape_interval: 15s       # По умолчанию опрашивать каждые 15 секунд
+  evaluation_interval: 15s   # как часто пересчитывать правила метрик
+
+scrape_configs:
+  # Prometheus мониторит сам себя — базовые метрики runtime
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Наш бот — основной target
+  - job_name: 'bot'
+    static_configs:
+      - targets: ['bot:9091']   # Docker DNS: имя сервиса + порт
+    scrape_interval: 10s

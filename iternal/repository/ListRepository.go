@@ -2,68 +2,96 @@ package repository
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"proxy/iternal/entity"
-	ip2 "proxy/pkg/ip"
-	"proxy/pkg/utils"
 )
 
 type ListRepository interface {
-	GetAllIps() []string
-	AddIps(ip string) (string, bool)
-	DeleteIp(ip string) (string, bool)
+	GetAllIps() ([]string, error)
+	GetAllCIDRIps() ([]string, error)
+	GetAllRangeIps() ([]string, error)
+	AddIp(ip string) error
+	DeleteIp(ip string) error
+	Contains(ip string) bool
 }
 
 type ListRepositoryImpl struct {
-	ListIps *entity.List
+	list     *entity.List
+	filename string
 }
 
-func CreateRepository(list *entity.List) ListRepository {
-	return &ListRepositoryImpl{ListIps: list}
+func NewListRepository(filename string) (ListRepository, error) {
+	list := &entity.List{Ips: []string{}}
+
+	if _, err := os.Stat(filename); err == nil {
+		file, err := os.Open(filename)
+		if err != nil {
+			return nil, err
+		}
+		defer file.Close()
+
+		var data struct {
+			Ips []string `json:"ips"`
+		}
+
+		decoder := json.NewDecoder(file)
+		if err := decoder.Decode(&data); err != nil {
+			return nil, err
+		}
+
+		list.Ips = data.Ips
+	}
+
+	return &ListRepositoryImpl{
+		list:     list,
+		filename: filename,
+	}, nil
 }
 
-func (listRepo *ListRepositoryImpl) AddIps(ip string) (string, bool) {
-
-	if !ip2.CheckIp(ip) {
-		return "Text is not IP", false
-	}
-
-	if ip2.CheckInIp(ip, listRepo.ListIps.Ips) >= 0 {
-		return "This IP already in list", false
-	}
-
-	listRepo.ListIps.Ips = append(listRepo.ListIps.Ips, ip)
-
-	file, err := os.Create(listRepo.ListIps.Filename)
+func (r *ListRepositoryImpl) save() error {
+	file, err := os.Create(r.filename)
 	if err != nil {
-		panic("File Json List not found")
+		return err
 	}
 	defer file.Close()
 
+	data := struct {
+		Ips []string `json:"ips"`
+	}{
+		Ips: r.list.Ips,
+	}
+
 	encoder := json.NewEncoder(file)
-	err = encoder.Encode(listRepo.ListIps)
-	if err != nil {
-		panic(err)
-	}
-
-	return "", true
+	return encoder.Encode(data)
 }
 
-func (listRepo *ListRepositoryImpl) DeleteIp(ip string) (string, bool) {
-	index := ip2.CheckInIp(ip, listRepo.ListIps.Ips)
-	if !ip2.CheckIp(ip) {
-		return "Text is not IP", false
-	}
-
-	if index < 0 {
-		return "IP not in list", false
-	}
-
-	listRepo.ListIps.Ips = utils.RemoveByIndex(listRepo.ListIps.Ips, index)
-
-	return "", true
+func (r *ListRepositoryImpl) GetAllIps() ([]string, error) {
+	return r.list.GetAll(), nil
 }
 
-func (listRepo ListRepositoryImpl) GetAllIps() []string {
-	return listRepo.ListIps.Ips
+func (r *ListRepositoryImpl) AddIp(ip string) error {
+	if !r.list.AddIp(ip) {
+		return fmt.Errorf("ip %s already exists", ip)
+	}
+	return r.save()
+}
+
+func (r *ListRepositoryImpl) DeleteIp(ip string) error {
+	if !r.list.RemoveIp(ip) {
+		return fmt.Errorf("ip %s not found", ip)
+	}
+	return r.save()
+}
+
+func (r *ListRepositoryImpl) Contains(ip string) bool {
+	return r.list.Contains(ip)
+}
+
+func (r *ListRepositoryImpl) GetAllCIDRIps() ([]string, error) {
+	return r.list.GetAllCIDR(), nil
+}
+
+func (r *ListRepositoryImpl) GetAllRangeIps() ([]string, error) {
+	return r.list.GetAllRangeIps(), nil
 }
