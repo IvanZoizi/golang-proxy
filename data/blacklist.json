@@ -1,1 +1,7 @@
-{"file_name":"./data/blacklist.json","ips":["8.8.8.8"]}
+{
+  "file_name":"./data/blacklist.json",
+  "ips": [
+    "8.8.8.8",
+    "127.0.0.12"
+  ]
+}

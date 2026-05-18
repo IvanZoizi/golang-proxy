@@ -1,10 +1,11 @@
-// internal/repository/RateLimiterRepository.go
+// internal/repository/rateLimiterRepository.go
 package repository
 
 import (
 	"encoding/json"
 	"os"
 	"proxy/iternal/entity"
+	"proxy/pkg/utils"
 	"sync"
 	"time"
 )
@@ -16,6 +17,7 @@ type RateLimiterRepository interface {
 	SaveData(data *entity.RateLimitData) error
 	DeleteData(ip string) error
 	CleanupExpiredData() error
+	GetIpsByRequest() ([]string, map[string]int)
 }
 
 type RateLimiterRepositoryImpl struct {
@@ -195,4 +197,13 @@ func (r *RateLimiterRepositoryImpl) periodicCleanup() {
 	for range ticker.C {
 		r.CleanupExpiredData()
 	}
+}
+
+func (r *RateLimiterRepositoryImpl) GetIpsByRequest() ([]string, map[string]int) {
+	result := make(map[string]int, len(r.data))
+	for _, val := range r.data {
+		result[val.IP] = val.RequestsThisDay
+	}
+	keys := utils.KeysSortedByValueDesc(result)
+	return keys, result
 }

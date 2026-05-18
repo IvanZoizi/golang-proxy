@@ -4,6 +4,7 @@ package main
 import (
 	"go.uber.org/zap"
 	"proxy/configGolang"
+	metrics2 "proxy/iternal/metrics"
 	"proxy/iternal/repository"
 	"proxy/iternal/transport/http"
 	"proxy/iternal/usecase"
@@ -45,8 +46,10 @@ func main() {
 
 	listUseCase := usecase.CreateListUseCase(whiteListRepo, grayListRepo, blackListRepo)
 	rateLimiterUC := usecase.NewRateLimiterUseCase(rateLimiterRepo)
+	listHandler := http.CreateIpHandler(listUseCase, rateLimiterUC, cfg)
 
-	listHandler := http.CreateIpHandler(listUseCase, rateLimiterUC)
+	metrics := metrics2.CreateMetricsPuller(listUseCase, rateLimiterUC)
+	metrics.Init()
 
 	router := http.SetupRoute(listHandler)
 

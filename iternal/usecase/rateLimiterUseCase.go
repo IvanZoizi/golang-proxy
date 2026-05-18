@@ -247,3 +247,7 @@ func (uc *RateLimiterUseCase) GetSubnetLimits(ip string) (*entity.SubnetRateLimi
 
 	return nil, nil
 }
+
+func (uc *RateLimiterUseCase) GetIpsByRequst() ([]string, map[string]int) {
+	return uc.repo.GetIpsByRequest()
+}

@@ -10,6 +10,7 @@ type Config struct {
 	ServerPort string `json:"serverPort"`
 	AppName    string `json:"appName"`
 	Env        string `json:"env"`
+	SecretKey  string `json:"secretKey"`
 }
 
 func CreateConfig(filePath string) *Config {
@@ -20,6 +21,7 @@ func CreateConfig(filePath string) *Config {
 			":9000",
 			"Go Proxy",
 			"development",
+			"secret-key",
 		}
 	}
 	defer file.Close()
@@ -33,6 +35,7 @@ func CreateConfig(filePath string) *Config {
 			":9000",
 			"Go Proxy",
 			"development",
+			"secret-key",
 		}
 	}
 

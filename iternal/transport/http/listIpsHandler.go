@@ -1,10 +1,11 @@
 package http
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
+	"net/http"
+	"proxy/configGolang"
+	"proxy/iternal/metrics"
 	"proxy/iternal/usecase"
 	"proxy/pkg/logger"
 )
@@ -15,44 +16,38 @@ type IpHandlerInterface interface {
 	DeleteIpFromWhiteList(c *gin.Context)
 	CheckIp(c *gin.Context)
 	IPCheckMiddleware() gin.HandlerFunc
+	updateMetrics(listName string)
 }
 
 type IpHandler struct {
-	ListUseCase   *usecase.ListsUseCase
-	rateLimiterUC *usecase.RateLimiterUseCase
+	Config        *configGolang.Config
+	ListUseCase   usecase.ListUserCase
+	RateLimiterUC *usecase.RateLimiterUseCase
 }
 
 type IpConf struct {
 	Ip string `json:"ip"`
 }
 
-func CreateIpHandler(listUseCase *usecase.ListsUseCase, rateLimiterUC *usecase.RateLimiterUseCase) *IpHandler {
+func CreateIpHandler(listUseCase usecase.ListUserCase, rateLimiterUC *usecase.RateLimiterUseCase,
+	config *configGolang.Config) *IpHandler {
 	return &IpHandler{
 		ListUseCase:   listUseCase,
-		rateLimiterUC: rateLimiterUC,
+		RateLimiterUC: rateLimiterUC,
+		Config:        config,
 	}
 }
 
 func (h *IpHandler) GetWhiteIps(c *gin.Context) {
 	listName := c.Param("list")
-	var ips []string
-	var err error
-
-	switch listName {
-	case "white":
-		ips, err = h.ListUseCase.WhiteRepo.GetAllIps()
-	case "black":
-		ips, err = h.ListUseCase.BlackRepo.GetAllIps()
-	default:
-		ips, err = h.ListUseCase.GrayRepo.GetAllIps()
-	}
+	ips, err := h.ListUseCase.GetAllIps(listName)
 
 	if err != nil {
 		logger.Error("Failed to get IPs",
 			zap.String("list", listName),
 			zap.Error(err))
 		c.JSON(http.StatusInternalServerError, gin.H{
-			"message": err.Error(),
+			"message": err,
 		})
 		return
 	}
@@ -83,15 +78,7 @@ func (h IpHandler) CheckIp(c *gin.Context) {
 		return
 	}
 
-	var flag bool
-	switch listName {
-	case "white":
-		flag = h.ListUseCase.WhiteRepo.Contains(ipStruct.Ip)
-	case "black":
-		flag = h.ListUseCase.BlackRepo.Contains(ipStruct.Ip)
-	default:
-		flag = h.ListUseCase.GrayRepo.Contains(ipStruct.Ip)
-	}
+	flag, _ := h.ListUseCase.Contains(ipStruct.Ip, listName)
 
 	logger.Info("Check IP",
 		zap.String("list", listName),
@@ -108,7 +95,6 @@ func (h *IpHandler) NewIpInWhiteList(c *gin.Context) {
 	listName := c.Param("list")
 
 	var ipStruct IpConf
-
 	if err := c.ShouldBindJSON(&ipStruct); err != nil {
 		logger.Warn("Add IP failed",
 			zap.String("list", listName),
@@ -119,15 +105,7 @@ func (h *IpHandler) NewIpInWhiteList(c *gin.Context) {
 		return
 	}
 
-	var err error
-	switch listName {
-	case "white":
-		err = h.ListUseCase.WhiteRepo.AddIp(ipStruct.Ip)
-	case "black":
-		err = h.ListUseCase.BlackRepo.AddIp(ipStruct.Ip)
-	default:
-		err = h.ListUseCase.GrayRepo.AddIp(ipStruct.Ip)
-	}
+	err := h.ListUseCase.AddIp(ipStruct.Ip, listName)
 
 	if err == nil {
 		logger.Info("IP added",
@@ -137,6 +115,7 @@ func (h *IpHandler) NewIpInWhiteList(c *gin.Context) {
 			"list":   listName,
 			"status": "ok",
 		})
+		h.updateMetrics(listName)
 	} else {
 		logger.Error("Add IP failed",
 			zap.String("list", listName),
@@ -165,15 +144,7 @@ func (h *IpHandler) DeleteIpFromWhiteList(c *gin.Context) {
 		return
 	}
 
-	var err error
-	switch listName {
-	case "white":
-		err = h.ListUseCase.WhiteRepo.DeleteIp(ipStruct.Ip)
-	case "black":
-		err = h.ListUseCase.BlackRepo.DeleteIp(ipStruct.Ip)
-	default:
-		err = h.ListUseCase.GrayRepo.DeleteIp(ipStruct.Ip)
-	}
+	err := h.ListUseCase.DeleteIp(ipStruct.Ip, listName)
 
 	if err == nil {
 		logger.Info("IP deleted",
@@ -183,6 +154,7 @@ func (h *IpHandler) DeleteIpFromWhiteList(c *gin.Context) {
 			"list":   listName,
 			"status": "ok",
 		})
+		h.updateMetrics(listName)
 	} else {
 		logger.Error("Delete IP failed",
 			zap.String("list", listName),
@@ -193,6 +165,18 @@ func (h *IpHandler) DeleteIpFromWhiteList(c *gin.Context) {
 			"status":  "error",
 			"message": err.Error(),
 		})
+	}
+}
+
+func (h *IpHandler) updateMetrics(listName string) {
+	ips, _ := h.ListUseCase.GetAllIps(listName)
+	switch listName {
+	case "white":
+		metrics.ActiveIpsWhite.Set(float64(len(ips)))
+	case "black":
+		metrics.ActiveIpsBlack.Set(float64(len(ips)))
+	case "gray":
+		metrics.ActiveIpsGray.Set(float64(len(ips)))
 	}
 }
 

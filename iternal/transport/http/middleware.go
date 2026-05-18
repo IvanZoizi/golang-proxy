@@ -2,9 +2,9 @@ package http
 
 import (
 	"bytes"
-	"fmt"
 	"io"
 	"net/http"
+	"proxy/pkg/utils"
 	"sync"
 	"time"
 
@@ -52,14 +52,25 @@ type SubnetLimiter struct {
 
 func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
+
 		ipClient := ip2.GetClientIP(c.Request)
 
+		proxyKey, _ := utils.ExtractBearerToken(c.Request)
 		logger.Info("New request",
 			zap.String("IP", ipClient),
-			zap.String("path", c.Request.URL.Path))
-		fmt.Println(h.ListUseCase.WhiteRepo.GetAllIps())
-		fmt.Println(h.ListUseCase.BlackRepo.GetAllIps())
-		if h.ListUseCase.BlackRepo.Contains(ipClient) {
+			zap.String("path", c.Request.URL.Path),
+			zap.String("X-Proxy-Key", proxyKey))
+
+		if proxyKey == h.Config.SecretKey {
+			logger.Info("[OFFICIAL] IP in whitelist",
+				zap.String("ip", ipClient),
+				zap.String("path", c.Request.URL.String()))
+			c.Set("ip_status", "whitelist")
+			c.Set("client_ip", ipClient)
+			c.Next()
+		}
+
+		if flag, _ := h.ListUseCase.Contains(ipClient, "black"); flag {
 			logger.Warn("[BLOCKED] IP in blacklist",
 				zap.String("ip", ipClient),
 				zap.String("path", c.Request.URL.String()))
@@ -72,7 +83,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		blackIpsCIDR, _ := h.ListUseCase.BlackRepo.GetAllCIDRIps()
+		blackIpsCIDR, _ := h.ListUseCase.GetAllCIDRIps("black")
 		for _, str := range blackIpsCIDR {
 			if flag, _ := ip2.IsIPInSubnet(ipClient, str); flag {
 				logger.Warn("[BLOCKED] IP in blacklist CIDR",
@@ -89,7 +100,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			}
 		}
 
-		blackIpsRange, _ := h.ListUseCase.BlackRepo.GetAllRangeIps()
+		blackIpsRange, _ := h.ListUseCase.GetAllRangeIps("black")
 		for _, str := range blackIpsRange {
 			if flag, _ := ip2.IsIPInRange(ipClient, str); flag {
 				logger.Warn("[BLOCKED] IP in blacklist range",
@@ -105,8 +116,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 				return
 			}
 		}
-		fmt.Println(h.ListUseCase.WhiteRepo.GetAllIps())
-		if h.ListUseCase.WhiteRepo.Contains(ipClient) {
+		if flag, _ := h.ListUseCase.Contains(ipClient, "white"); flag {
 			logger.Info("[ALLOWED] IP in whitelist",
 				zap.String("ip", ipClient),
 				zap.String("path", c.Request.URL.String()))
@@ -116,7 +126,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		whiteIpsListCIDR, _ := h.ListUseCase.WhiteRepo.GetAllCIDRIps()
+		whiteIpsListCIDR, _ := h.ListUseCase.GetAllCIDRIps("white")
 		for _, str := range whiteIpsListCIDR {
 			if flag, _ := ip2.IsIPInSubnet(ipClient, str); flag {
 				logger.Info("[ALLOWED] IP in whitelist CIDR",
@@ -130,7 +140,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			}
 		}
 
-		whiteIpsRange, _ := h.ListUseCase.WhiteRepo.GetAllRangeIps()
+		whiteIpsRange, _ := h.ListUseCase.GetAllRangeIps("white")
 		for _, str := range whiteIpsRange {
 			if flag, _ := ip2.IsIPInRange(ipClient, str); flag {
 				logger.Info("[ALLOWED] IP in whitelist range",
@@ -144,7 +154,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			}
 		}
 
-		if h.ListUseCase.GrayRepo.Contains(ipClient) {
+		if flag, _ := h.ListUseCase.Contains(ipClient, "gray"); flag {
 			logger.Info("[GRAYLIST] IP in graylist",
 				zap.String("ip", ipClient),
 				zap.String("path", c.Request.URL.String()))
@@ -154,7 +164,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		grayIpsListCIDR, _ := h.ListUseCase.GrayRepo.GetAllCIDRIps()
+		grayIpsListCIDR, _ := h.ListUseCase.GetAllCIDRIps("gray")
 		for _, str := range grayIpsListCIDR {
 			if flag, _ := ip2.IsIPInSubnet(ipClient, str); flag {
 				logger.Info("[GRAYLIST] IP in graylist CIDR",
@@ -168,7 +178,7 @@ func (h *IpHandler) IPCheckMiddleware() gin.HandlerFunc {
 			}
 		}
 
-		grayIpsRange, _ := h.ListUseCase.GrayRepo.GetAllRangeIps()
+		grayIpsRange, _ := h.ListUseCase.GetAllRangeIps("gray")
 		for _, str := range grayIpsRange {
 			if flag, _ := ip2.IsIPInRange(ipClient, str); flag {
 				logger.Info("[GRAYLIST] IP in graylist range",
@@ -197,7 +207,17 @@ func (h *IpHandler) RateLimiterMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		clientIP := ip2.GetClientIP(c.Request)
 
-		if h.rateLimiterUC == nil {
+		proxyKey, _ := utils.ExtractBearerToken(c.Request)
+		logger.Info("New request",
+			zap.String("IP", clientIP),
+			zap.String("path", c.Request.URL.Path),
+			zap.String("X-Proxy-Key", proxyKey))
+
+		if proxyKey == h.Config.SecretKey {
+			c.Next()
+		}
+
+		if h.RateLimiterUC == nil {
 			logger.Warn("Rate limiter not initialized, skipping")
 			c.Next()
 			return
@@ -209,7 +229,7 @@ func (h *IpHandler) RateLimiterMiddleware() gin.HandlerFunc {
 
 		connKey := clientIP + ":in"
 		if _, loaded := activeConns.LoadOrStore(connKey, true); !loaded {
-			ok, msg, err := h.rateLimiterUC.CheckConnectionLimit(clientIP, true)
+			ok, msg, err := h.RateLimiterUC.CheckConnectionLimit(clientIP, true)
 			if err != nil {
 				logger.Error("Connection limit check error", zap.Error(err))
 			}
@@ -226,13 +246,13 @@ func (h *IpHandler) RateLimiterMiddleware() gin.HandlerFunc {
 			}
 			defer func() {
 				activeConns.Delete(connKey)
-				h.rateLimiterUC.CheckConnectionLimit(clientIP, false)
+				h.RateLimiterUC.CheckConnectionLimit(clientIP, false)
 				logger.Debug("Connection released",
 					zap.String("ip", clientIP))
 			}()
 		}
 
-		ok, msg, err := h.rateLimiterUC.CheckRequestLimit(clientIP)
+		ok, msg, err := h.RateLimiterUC.CheckRequestLimit(clientIP)
 		if err != nil {
 			logger.Error("Request limit check error", zap.Error(err))
 		}
@@ -266,7 +286,7 @@ func (h *IpHandler) RateLimiterMiddleware() gin.HandlerFunc {
 
 		c.Next()
 
-		ok, msg, err = h.rateLimiterUC.CheckTrafficLimit(clientIP, requestSize, wrapper.GetSize())
+		ok, msg, err = h.RateLimiterUC.CheckTrafficLimit(clientIP, requestSize, wrapper.GetSize())
 		if err != nil {
 			logger.Error("Traffic limit check error", zap.Error(err))
 		}
@@ -293,19 +313,29 @@ func (h *IpHandler) SubnetRateLimiterMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		clientIP := ip2.GetClientIP(c.Request)
 
-		if h.rateLimiterUC == nil {
+		proxyKey, _ := utils.ExtractBearerToken(c.Request)
+		logger.Info("New request",
+			zap.String("IP", clientIP),
+			zap.String("path", c.Request.URL.Path),
+			zap.String("X-Proxy-Key", proxyKey))
+
+		if proxyKey == h.Config.SecretKey {
+			c.Next()
+		}
+
+		if h.RateLimiterUC == nil {
 			c.Next()
 			return
 		}
 
-		config, err := h.rateLimiterUC.GetRateLimitConfig()
+		config, err := h.RateLimiterUC.GetRateLimitConfig()
 		if err != nil {
 			logger.Error("Failed to get rate limit config", zap.Error(err))
 			c.Next()
 			return
 		}
 
-		subnetLimits, err := h.rateLimiterUC.GetSubnetLimits(clientIP)
+		subnetLimits, err := h.RateLimiterUC.GetSubnetLimits(clientIP)
 		if err != nil || subnetLimits == nil {
 			c.Next()
 			return
