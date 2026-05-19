@@ -1,0 +1,377 @@
+basePath: /
+definitions:
+  http.InvalidateRequestSwagger:
+    properties:
+      key:
+        example: cache-key-123
+        type: string
+      prefix:
+        example: /api/users/
+        type: string
+      regex:
+        example: .*user.*
+        type: string
+      stale_only:
+        example: false
+        type: boolean
+      tag:
+        example: users
+        type: string
+      type:
+        enum:
+        - exact
+        - prefix
+        - regex
+        - tag
+        - all
+        example: prefix
+        type: string
+    required:
+    - type
+    type: object
+  http.IpConf:
+    properties:
+      ip:
+        example: 192.168.1.1
+        type: string
+    type: object
+  repository.CacheStats:
+    properties:
+      evicted_count:
+        type: integer
+      hit_count:
+        type: integer
+      hit_rate:
+        type: number
+      miss_count:
+        type: integer
+      total_entries:
+        type: integer
+      total_size_bytes:
+        type: integer
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@proxy.com
+    name: API Support
+  description: API документация для прокси-сервера
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: http://swagger.io/terms/
+  title: Proxy API Documentation
+  version: "1.0"
+paths:
+  /api/{list}:
+    delete:
+      consumes:
+      - application/json
+      description: Удаляет IP адрес из указанного списка (white/black/gray)
+      parameters:
+      - description: Тип списка
+        enum:
+        - white
+        - black
+        - gray
+        in: path
+        name: list
+        required: true
+        type: string
+      - description: IP адрес для удаления
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/http.IpConf'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Удалить IP из списка
+      tags:
+      - ip-lists
+    get:
+      consumes:
+      - application/json
+      description: Возвращает все IP из указанного списка (white/black/gray)
+      parameters:
+      - description: Тип списка
+        enum:
+        - white
+        - black
+        - gray
+        in: path
+        name: list
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Получить список IP по типу списка
+      tags:
+      - ip-lists
+    post:
+      consumes:
+      - application/json
+      description: Добавляет новый IP адрес в указанный список (white/black/gray)
+      parameters:
+      - description: Тип списка
+        enum:
+        - white
+        - black
+        - gray
+        in: path
+        name: list
+        required: true
+        type: string
+      - description: IP адрес для добавления
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/http.IpConf'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Добавить IP в список
+      tags:
+      - ip-lists
+  /api/{list}/check:
+    post:
+      consumes:
+      - application/json
+      description: Проверяет, находится ли IP адрес в указанном списке
+      parameters:
+      - description: Тип списка
+        enum:
+        - white
+        - black
+        - gray
+        in: path
+        name: list
+        required: true
+        type: string
+      - description: IP адрес для проверки
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/http.IpConf'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Проверить наличие IP в списке
+      tags:
+      - ip-lists
+  /api/cache/clear:
+    delete:
+      consumes:
+      - application/json
+      description: Полностью удаляет все записи из кэша
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Очистить весь кэш
+      tags:
+      - cache
+  /api/cache/config:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает текущую конфигурацию кэширования
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Получить конфигурацию кэша
+      tags:
+      - cache
+    put:
+      consumes:
+      - application/json
+      description: Обновляет настройки кэширования
+      parameters:
+      - description: Новая конфигурация кэша
+        in: body
+        name: config
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Обновить конфигурацию кэша
+      tags:
+      - cache
+  /api/cache/invalidate:
+    post:
+      consumes:
+      - application/json
+      description: Инвалидирует кэш по различным критериям
+      parameters:
+      - description: Параметры инвалидации
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/http.InvalidateRequestSwagger'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Инвалидировать кэш
+      tags:
+      - cache
+  /api/cache/stats:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает статистику использования кэша
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repository.CacheStats'
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Получить статистику кэша
+      tags:
+      - cache
+  /health:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает статус сервиса
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Проверка здоровья сервиса
+      tags:
+      - health
+schemes:
+- http
+- https
+securityDefinitions:
+  BearerAuth:
+    description: 'Введите токен в формате: Bearer {token}'
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

@@ -1,6 +1,6 @@
 {
-  "uid": "simple-monitoring123123",
-  "title": "Простой мониторинг123123",
+  "uid": "simple-monitoring",
+  "title": "Простой мониторинг",
   "description": "Простой дашборд для Prometheus",
   "tags": ["prometheus", "basic", "proxy"],
   "timezone": "browser",

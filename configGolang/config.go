@@ -7,10 +7,11 @@ import (
 )
 
 type Config struct {
-	ServerPort string `json:"serverPort"`
-	AppName    string `json:"appName"`
-	Env        string `json:"env"`
-	SecretKey  string `json:"secretKey"`
+	ServerPort      string `json:"serverPort"`
+	ProxyServerPort string `json:"proxyServerPort"`
+	AppName         string `json:"appName"`
+	Env             string `json:"env"`
+	SecretKey       string `json:"secretKey"`
 }
 
 func CreateConfig(filePath string) *Config {
@@ -19,6 +20,7 @@ func CreateConfig(filePath string) *Config {
 		logger.Errorf("Not found file by path %s, %s", filePath, err)
 		return &Config{
 			":9000",
+			":8000",
 			"Go Proxy",
 			"development",
 			"secret-key",
@@ -33,6 +35,7 @@ func CreateConfig(filePath string) *Config {
 		logger.Errorf("Not found file by path %s, %s", filePath, err)
 		return &Config{
 			":9000",
+			":8000",
 			"Go Proxy",
 			"development",
 			"secret-key",

@@ -1,0 +1,137 @@
+{
+  "rules": [
+    {
+      "id": "rule_001",
+      "priority": 100,
+      "match_type": "domain",
+      "pattern": "api.example.com",
+      "enabled": true,
+      "ttl_seconds": 600,
+      "max_size_bytes": 5242880,
+      "cache_status": [200, 201, 203],
+      "exclude_patterns": [
+        "/private/",
+        "/admin/",
+        "/auth/"
+      ],
+      "tags": ["api", "production"]
+    },
+    {
+      "id": "rule_002",
+      "priority": 90,
+      "match_type": "path",
+      "pattern": "/static/",
+      "enabled": true,
+      "ttl_seconds": 3600,
+      "max_size_bytes": 20971520,
+      "cache_status": [200, 206, 304],
+      "exclude_patterns": [
+        "*.tmp",
+        "temp/*"
+      ],
+      "tags": ["static", "assets"]
+    },
+    {
+      "id": "rule_003",
+      "priority": 80,
+      "match_type": "regex",
+      "pattern": "^/api/v\\d+/public/",
+      "enabled": true,
+      "ttl_seconds": 1800,
+      "max_size_bytes": 1048576,
+      "cache_status": [200],
+      "exclude_patterns": [],
+      "tags": ["public", "api"]
+    },
+    {
+      "id": "rule_004",
+      "priority": 70,
+      "match_type": "exact",
+      "pattern": "/health",
+      "enabled": false,
+      "ttl_seconds": 10,
+      "max_size_bytes": 1024,
+      "cache_status": [200],
+      "exclude_patterns": [],
+      "tags": ["health", "monitoring"]
+    },
+    {
+      "id": "rule_005",
+      "priority": 60,
+      "match_type": "domain",
+      "pattern": "cdn.example.com",
+      "enabled": true,
+      "ttl_seconds": 86400,
+      "max_size_bytes": 52428800,
+      "cache_status": [200, 206, 304],
+      "exclude_patterns": [
+        "/private/",
+        "/temp/"
+      ],
+      "tags": ["cdn", "cache-long"]
+    },
+    {
+      "id": "rule_006",
+      "priority": 50,
+      "match_type": "path",
+      "pattern": "/images/",
+      "enabled": true,
+      "ttl_seconds": 7200,
+      "max_size_bytes": 10485760,
+      "cache_status": [200, 206],
+      "exclude_patterns": [
+        "/*-temp.*",
+        "/*-tmp.*"
+      ],
+      "tags": ["images", "media"]
+    },
+    {
+      "id": "rule_007",
+      "priority": 40,
+      "match_type": "regex",
+      "pattern": ".*\\.(css|js|png|jpg|jpeg|gif|svg|webp)$",
+      "enabled": true,
+      "ttl_seconds": 43200,
+      "max_size_bytes": 15728640,
+      "cache_status": [200, 206],
+      "exclude_patterns": [],
+      "tags": ["assets", "static-files"]
+    },
+    {
+      "id": "rule_008",
+      "priority": 30,
+      "match_type": "path",
+      "pattern": "/api/rate-limited",
+      "enabled": true,
+      "ttl_seconds": 60,
+      "max_size_bytes": 4096,
+      "cache_status": [200, 429],
+      "exclude_patterns": [],
+      "tags": ["rate-limited", "api"]
+    },
+    {
+      "id": "rule_009",
+      "priority": 20,
+      "match_type": "domain",
+      "pattern": "websocket.example.com",
+      "enabled": true,
+      "ttl_seconds": 0,
+      "max_size_bytes": 0,
+      "cache_status": [],
+      "exclude_patterns": ["*"],
+      "tags": ["websocket", "no-cache"]
+    },
+    {
+      "id": "rule_010",
+      "priority": 10,
+      "match_type": "regex",
+      "pattern": "/download/.*\\.(zip|tar|gz|exe)$",
+      "enabled": true,
+      "ttl_seconds": 0,
+      "max_size_bytes": 0,
+      "cache_status": [],
+      "exclude_patterns": [],
+      "tags": ["downloads", "no-cache-large"]
+    }
+  ]
+}

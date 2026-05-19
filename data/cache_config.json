@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "default_ttl_seconds": 300,
+  "max_entry_size_bytes": 10485760,
+  "min_entry_size_bytes": 1,
+  "max_cache_size_bytes": 104857600,
+  "max_entries": 10000,
+  "cache_2xx": true,
+  "cache_3xx": true,
+  "cache_4xx": false,
+  "cache_5xx": false,
+  "ttl_2xx_seconds": 300,
+  "ttl_3xx_seconds": 60,
+  "ttl_4xx_seconds": 0,
+  "ttl_5xx_seconds": 0,
+  "cache_methods": ["GET", "HEAD"],
+  "respect_no_cache": true,
+  "respect_max_age": true
+}
