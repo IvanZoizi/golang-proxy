@@ -26,6 +26,7 @@ type CacheUseCase interface {
 	GetCacheKey(req *http.Request) string
 	CheckMethod(method string) bool
 	UpdateConfigCache(req dto.UpdateCacheConfigRequest) error
+	CheckNotCacheMethod(path string) (bool, error)
 }
 
 type InvalidateRequest struct {
@@ -406,4 +407,13 @@ func (uc CacheUseCaseImpl) UpdateConfigCache(req dto.UpdateCacheConfigRequest) e
 		uc.config.RespectMaxAge = *req.RespectMaxAge
 	}
 	return nil
+}
+
+func (uc *CacheUseCaseImpl) CheckNotCacheMethod(path string) (bool, error) {
+	for _, method := range uc.config.NotCacheURL {
+		if method == path {
+			return true, nil
+		}
+	}
+	return false, nil
 }

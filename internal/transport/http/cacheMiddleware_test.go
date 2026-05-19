@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"net/http"
 	"net/http/httptest"
+	"proxy/internal/dto"
 	"proxy/internal/entity"
 	"proxy/internal/repository"
 	"testing"
@@ -43,6 +44,14 @@ func (m *mockCacheUseCaseForMiddleware) GetCacheKey(req *http.Request) string {
 
 func (m *mockCacheUseCaseForMiddleware) CheckMethod(method string) bool {
 	return method == "GET"
+}
+
+func (m *mockCacheUseCaseForMiddleware) UpdateConfigCache(req dto.UpdateCacheConfigRequest) error {
+	return nil
+}
+
+func (m *mockCacheUseCaseForMiddleware) CheckNotCacheMethod(path string) (bool, error) {
+	return false, nil
 }
 
 func TestNewCacheMiddleware(t *testing.T) {

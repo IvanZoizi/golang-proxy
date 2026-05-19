@@ -14,6 +14,7 @@
   "ttl_4xx_seconds": 0,
   "ttl_5xx_seconds": 0,
   "cache_methods": ["GET", "HEAD"],
+  "not_cache_url": ["/metrics"],
   "respect_no_cache": true,
   "respect_max_age": true
 }

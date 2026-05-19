@@ -3,6 +3,7 @@ package http
 import (
 	"net/http"
 	"net/http/httptest"
+	"proxy/internal/dto"
 	"proxy/internal/entity"
 	"testing"
 	"time"
@@ -30,6 +31,12 @@ func (m *mockRateLimiterUCForMiddleware) GetSubnetLimits(ip string) (*entity.Sub
 }
 func (m *mockRateLimiterUCForMiddleware) GetIpsByRequest() ([]string, map[string]int) {
 	return nil, nil
+}
+func (m *mockRateLimiterUCForMiddleware) UpdateConfigCache(req dto.UpdateCacheConfigRequest) error {
+	return nil
+}
+func (m *mockRateLimiterUCForMiddleware) CheckNotCacheMethod(path string) (bool, error) {
+	return false, nil
 }
 func (m *mockRateLimiterUCForMiddleware) getCachedData(string) *entity.RateLimitData   { return nil }
 func (m *mockRateLimiterUCForMiddleware) saveCachedData(string, *entity.RateLimitData) {}

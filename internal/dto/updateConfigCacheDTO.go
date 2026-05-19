@@ -18,6 +18,7 @@ type UpdateCacheConfigRequest struct {
 	TTL4xx            *string  `json:"ttl_4xx,omitempty" example:"1m"`
 	TTL5xx            *string  `json:"ttl_5xx,omitempty" example:"10s"`
 	CacheMethods      []string `json:"cache_methods,omitempty" example:"GET,HEAD"`
+	NotCacheURL       []string `json:"not_cache_url" example:"/metrics"`
 	RespectNoCache    *bool    `json:"respect_no_cache,omitempty" example:"true"`
 	RespectMaxAge     *bool    `json:"respect_max_age,omitempty" example:"true"`
 }

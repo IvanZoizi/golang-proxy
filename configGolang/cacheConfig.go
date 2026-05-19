@@ -22,6 +22,7 @@ func GetDefaultCacheConfig() *entity.CacheConfig {
 		TTL4xx:         0,
 		TTL5xx:         0,
 		CacheMethods:   []string{"GET", "HEAD"},
+		NotCacheURL:    []string{"/metrics"},
 		RespectNoCache: true,
 		RespectMaxAge:  true,
 	}

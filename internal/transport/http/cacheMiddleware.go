@@ -47,8 +47,15 @@ func (w *CacheResponseWriter) Body() []byte {
 
 func (m *CacheMiddleware) CacheMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
+		logger.Info("Start cache",
+			zap.String("Path", c.Request.URL.Path))
 		if !m.cacheUC.CheckMethod(c.Request.Method) {
 			m.cacheUC.Invalidate(usecase.NewInvalidationRequest("all"))
+			c.Next()
+			return
+		}
+
+		if flag, _ := m.cacheUC.CheckNotCacheMethod(c.Request.URL.Path); flag {
 			c.Next()
 			return
 		}

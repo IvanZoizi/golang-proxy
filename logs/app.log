@@ -46551,3 +46551,909 @@ net/http.(*conn).serve
 2026-05-19T17:51:07.316+0400	[34mINFO[0m	logger/logger.go:49	Start Update Top User
 2026-05-19T17:51:13.568+0400	[34mINFO[0m	logger/logger.go:49	Shutting down server...
 2026-05-19T17:51:13.568+0400	[34mINFO[0m	logger/logger.go:49	Server exited gracefully
+2026-05-19T14:10:10.032Z	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8080"}
+2026-05-19T14:10:10.043Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:10:10.043Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:10:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:15.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:15.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:15.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:15.105Z	[35mDEBUG[0m	logger/logger.go:45	Cache MISS	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:10:15.107Z	[34mINFO[0m	logger/logger.go:49	Response cached	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "ttl": "5m0s", "size": 2181}
+2026-05-19T14:10:15.107Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:15.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:10:15.108Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:10:15.108Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:25.043Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:10:25.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:25.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:25.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:25.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:25.105Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:10:25.105Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:25.105Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:10:25.105Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:10:25.106Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:35.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:35.093Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:35.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:35.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:35.094Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:10:35.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:35.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:10:35.094Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:10:35.095Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:40.035Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:10:45.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:45.093Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:45.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:45.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:45.094Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:10:45.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:45.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:10:45.094Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:10:45.094Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:55.035Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:10:55.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:55.093Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:55.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:55.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:10:55.094Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:10:55.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:10:55.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:10:55.095Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:10:55.095Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:05.090Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:05.090Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:05.090Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:05.090Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:05.091Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:05.091Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:05.091Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:05.091Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:05.091Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:10.032Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:11:15.091Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:15.091Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:15.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:15.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:15.092Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:15.092Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:15.092Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:15.093Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:15.093Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:25.028Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:11:25.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:25.092Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:25.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:25.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:25.092Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:25.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:25.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:25.093Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:25.093Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:35.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:35.087Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:35.088Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:35.088Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:35.088Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:35.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:35.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:35.089Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:35.089Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:40.025Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:11:45.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:45.087Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:45.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:45.088Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:45.088Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:45.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:45.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:45.088Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:45.089Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:55.026Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:11:55.089Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:55.089Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:55.089Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:55.089Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:11:55.090Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:11:55.090Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:11:55.090Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:11:55.090Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:11:55.090Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:05.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:05.085Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:05.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:05.086Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:05.086Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:05.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:05.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:05.086Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:05.087Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:10.023Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:12:15.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:15.087Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:15.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:15.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:15.088Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:15.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:15.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:15.088Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:15.088Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:25.026Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:12:25.086Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:25.087Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:25.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:25.087Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:25.087Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:25.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:25.088Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:25.088Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:25.088Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:35.083Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:35.084Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:35.084Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:35.084Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:35.084Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:35.084Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:35.085Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:35.085Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:35.085Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:40.025Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:12:45.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:45.085Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:45.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:45.086Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:45.086Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:45.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:45.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:45.086Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:45.087Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:55.025Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:12:55.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:55.085Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:55.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:55.085Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:12:55.085Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:12:55.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:12:55.086Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:12:55.086Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:12:55.086Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:05.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:05.081Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:05.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:05.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:05.082Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:05.082Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:05.082Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:05.082Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:05.082Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:10.018Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:13:15.082Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:15.082Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:15.083Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:15.083Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:15.083Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:15.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:15.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:15.084Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:15.084Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:25.022Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:13:25.082Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:25.082Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:25.082Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:25.083Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:25.083Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:25.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:25.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:25.083Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:25.084Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:35.079Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:35.079Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:35.079Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:35.080Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:35.080Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:35.080Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:35.080Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:35.080Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:35.080Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:40.021Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:13:45.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:45.082Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:45.082Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:45.082Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:45.083Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:45.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:45.083Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:45.083Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:45.084Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:55.017Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:13:55.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:55.081Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:55.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:55.081Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:13:55.081Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:13:55.082Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:13:55.082Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:13:55.082Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:13:55.082Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:05.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:05.077Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:05.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:05.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:05.078Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:05.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:05.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:05.078Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:05.078Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:10.014Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:14:15.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:15.077Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:15.078Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:15.078Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:15.078Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:15.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:15.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:15.079Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:15.079Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:25.016Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:14:25.078Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:25.079Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:25.079Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:25.079Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:25.079Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:25.079Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:25.080Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:25.080Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:25.080Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:35.074Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:35.075Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:35.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:35.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:35.075Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:35.075Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:35.076Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:35.076Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:35.076Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:40.016Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:14:45.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:45.077Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:45.078Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:45.078Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:45.078Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:45.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:45.079Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:45.079Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:45.079Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:55.013Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:14:55.076Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:55.077Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:55.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:55.077Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:14:55.077Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:14:55.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:14:55.078Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:14:55.078Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:14:55.078Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:05.073Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:05.073Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:05.073Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:05.073Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:05.073Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:05.074Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:05.074Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:05.074Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:05.074Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:10.014Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:15:15.074Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:15.075Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:15.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:15.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:15.075Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:15.076Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:15.076Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:15.076Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:15.076Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:25.015Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:15:25.074Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:25.074Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:25.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:25.075Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:25.075Z	[35mDEBUG[0m	logger/logger.go:45	Cache MISS	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:25.077Z	[34mINFO[0m	logger/logger.go:49	Response cached	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "ttl": "5m0s", "size": 2324}
+2026-05-19T14:15:25.077Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:25.077Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:25.077Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:25.078Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:35.071Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:35.071Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:35.072Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:35.072Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:35.072Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:35.072Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:35.073Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:35.073Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:35.073Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:40.008Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:15:45.070Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:45.071Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:45.071Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:45.071Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:45.071Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:45.072Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:45.072Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:45.072Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:45.072Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:55.013Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:15:55.072Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:55.073Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:55.073Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:55.073Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:15:55.073Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:15:55.074Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:15:55.074Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:15:55.074Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:15:55.074Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:05.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:05.068Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:05.069Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:05.069Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:05.069Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:05.069Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:05.070Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:05.070Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:05.070Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:10.007Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:16:15.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:15.069Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:15.069Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:15.069Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:15.070Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:15.070Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:15.070Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:15.071Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:15.071Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:22.749Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": ""}
+2026-05-19T14:16:22.749Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:16:22.749Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": ""}
+2026-05-19T14:16:22.749Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:16:22.749Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": ""}
+2026-05-19T14:16:22.750Z	[35mDEBUG[0m	logger/logger.go:45	Cache MISS	{"key": "36295b9a172e8ab77a259a6e6d6a32565e5357d254313a09f8b655d6f54d8a76", "path": "/metrics"}
+2026-05-19T14:16:22.751Z	[34mINFO[0m	logger/logger.go:49	Response cached	{"key": "36295b9a172e8ab77a259a6e6d6a32565e5357d254313a09f8b655d6f54d8a76", "ttl": "5m0s", "size": 9474}
+2026-05-19T14:16:22.751Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 9474}
+2026-05-19T14:16:22.751Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:16:25.007Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:16:25.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:25.068Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:25.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:25.069Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:25.070Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:25.071Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:25.072Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:25.072Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:25.073Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:35.066Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:35.067Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:35.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:35.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:35.068Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:35.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:35.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:35.069Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:35.069Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:37.592Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:16:37.593Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:16:37.593Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:16:37.593Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:16:37.594Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:16:37.594Z	[35mDEBUG[0m	logger/logger.go:45	Cache MISS	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "path": "/metrics"}
+2026-05-19T14:16:37.595Z	[34mINFO[0m	logger/logger.go:49	Response cached	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "ttl": "5m0s", "size": 2332}
+2026-05-19T14:16:37.596Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2332}
+2026-05-19T14:16:37.596Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:16:40.005Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:16:45.066Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:45.067Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:45.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:45.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:45.068Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:45.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:45.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:45.068Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:45.068Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:55.005Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:16:55.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:55.068Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:55.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:55.068Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:16:55.069Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:16:55.069Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:16:55.069Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:16:55.069Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:16:55.070Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:05.064Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:05.065Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:05.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:05.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:05.065Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:17:05.066Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:05.066Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:17:05.066Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:17:05.066Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:10.002Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:17:15.064Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:15.065Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:15.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:15.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:15.065Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:17:15.066Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:15.066Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:17:15.066Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:17:15.067Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:25.005Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:17:25.066Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:25.067Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:25.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:25.067Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:25.067Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:17:25.067Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:25.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:17:25.068Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:17:25.068Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:40.004Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:17:55.001Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:17:55.108Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:55.108Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:55.108Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:55.108Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:17:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:17:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:17:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:17:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:17:55.109Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:05.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:05.105Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:05.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:05.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:05.106Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:05.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:05.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:05.107Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:05.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:09.999Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:18:15.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:15.109Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:15.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:15.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:15.110Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:15.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:15.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:15.110Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:15.111Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:25.002Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:18:25.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:25.109Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:25.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:25.109Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:25.110Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:25.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:25.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:25.110Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:25.110Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:35.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:35.103Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:35.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:35.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:35.103Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:35.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:35.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:35.104Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:35.104Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:39.996Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:18:45.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:45.107Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:45.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:45.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:45.107Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:45.108Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:54.997Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:18:55.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:55.107Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:55.108Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:55.108Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:18:55.108Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:18:55.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:18:55.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:18:55.108Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:18:55.109Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:05.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:05.101Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:05.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:05.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:05.102Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:05.102Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:05.102Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:05.102Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:05.102Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:09.998Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:19:15.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:15.103Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:15.104Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:15.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:15.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:15.105Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:15.105Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:24.995Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:19:25.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:25.106Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:25.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:25.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:25.106Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:25.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:25.107Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:25.107Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:25.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:35.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:35.099Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:35.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:35.100Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:35.100Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:35.100Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:35.100Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:35.101Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:35.101Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:39.996Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:19:45.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:45.103Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:45.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:45.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:45.105Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:46.778Z	[34mINFO[0m	logger/logger.go:49	Shutting down server...
+2026-05-19T14:19:46.778Z	[34mINFO[0m	logger/logger.go:49	Server exited gracefully
+2026-05-19T14:19:48.782Z	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8080"}
+2026-05-19T14:19:48.793Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:19:48.793Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:19:55.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:55.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:55.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:55.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:19:55.105Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:19:55.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:55.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:19:55.106Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:19:55.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:19:55.309Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:19:55.309Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:19:55.309Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:19:55.310Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:19:55.310Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:19:55.310Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "path": "/metrics"}
+2026-05-19T14:19:55.310Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2332}
+2026-05-19T14:19:55.311Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:20:03.791Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:20:05.097Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:05.097Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:05.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:05.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:05.098Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:05.098Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:05.098Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:05.099Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:05.099Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:14.227Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:14.228Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:14.228Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:14.228Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:14.228Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:14.229Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "path": "/metrics"}
+2026-05-19T14:20:14.229Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2332}
+2026-05-19T14:20:14.229Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:20:15.001Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:15.002Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:15.002Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:15.002Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:15.002Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:15.003Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "path": "/metrics"}
+2026-05-19T14:20:15.003Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2332}
+2026-05-19T14:20:15.003Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:20:15.097Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:15.098Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:15.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:15.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:15.098Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:15.098Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:15.099Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:15.099Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:15.099Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:18.791Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:20:25.097Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:25.097Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:25.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:25.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:25.098Z	[35mDEBUG[0m	logger/logger.go:45	Cache MISS	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:25.100Z	[34mINFO[0m	logger/logger.go:49	Response cached	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "ttl": "5m0s", "size": 2288}
+2026-05-19T14:20:25.101Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:25.101Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:25.101Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:25.101Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:33.791Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:20:35.095Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:35.096Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:35.096Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:35.096Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:35.097Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:35.097Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:35.097Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:35.097Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:35.098Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:37.452Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:37.452Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:37.453Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:37.453Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:20:37.453Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:20:37.453Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "7f6a75083e51b1acf87c13492a565a1b1eb10c36742e959bc8cacf5605a2e099", "path": "/metrics"}
+2026-05-19T14:20:37.454Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2332}
+2026-05-19T14:20:37.454Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:20:45.097Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:45.097Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:45.097Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:45.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:45.098Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:45.098Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:45.098Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:45.099Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:45.099Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:48.789Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:20:55.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:55.099Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:55.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:55.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:20:55.100Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:20:55.100Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:20:55.100Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:20:55.101Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:20:55.101Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:03.790Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:21:05.093Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:05.093Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:05.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:05.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:05.094Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:21:05.094Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:05.095Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:21:05.095Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:21:05.095Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:15.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:15.094Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:15.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:15.095Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:15.095Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:21:15.095Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:15.095Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:21:15.096Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:21:15.096Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:18.789Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:21:25.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:25.094Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:25.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:25.094Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:25.094Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:21:25.095Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:25.095Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:21:25.095Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:21:25.095Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:33.787Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:21:35.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:35.092Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:35.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:35.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:35.093Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:21:35.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:35.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:21:35.093Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:21:35.094Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:45.091Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:45.092Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:45.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:45.092Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:21:45.092Z	[35mDEBUG[0m	logger/logger.go:45	Cache HIT	{"key": "70f23c2ecebe04c646060a18f60b6b083b3d2df9f1cdc3759f85d21138313eb7", "path": "/metrics"}
+2026-05-19T14:21:45.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:45.093Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:21:45.093Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:21:45.093Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:21:47.477Z	[34mINFO[0m	logger/logger.go:49	Shutting down server...
+2026-05-19T14:21:47.477Z	[34mINFO[0m	logger/logger.go:49	Server exited gracefully
+2026-05-19T14:22:38.862Z	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8080"}
+2026-05-19T14:22:38.874Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:22:38.875Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:22:39.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:39.107Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:39.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:39.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:39.108Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:39.111Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:39.111Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:22:39.111Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:22:39.111Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:45.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:45.106Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:45.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:45.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:45.106Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:22:45.108Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:22:45.108Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:47.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:47.099Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:47.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:47.099Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:47.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:47.100Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:47.101Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2180}
+2026-05-19T14:22:47.101Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:22:48.064Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.065Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:48.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.065Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:48.065Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.065Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:48.068Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2184}
+2026-05-19T14:22:48.068Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:22:48.825Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.826Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:48.826Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.826Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.1", "path": "/metrics"}
+2026-05-19T14:22:48.827Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.1", "path": "/metrics", "X-Proxy-Key": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE3Nzc3MDc0NTN9.ssK3xgY4Lvlok_HupD01JlowTxSQpv85ejeGeUV0vpwluXUvIsL9PBcYLPTUn3kv"}
+2026-05-19T14:22:48.827Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:48.829Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.1", "path": "/metrics", "status": 200, "request_size": 28, "response_size": 2183}
+2026-05-19T14:22:48.829Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.1"}
+2026-05-19T14:22:53.876Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:22:55.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:55.106Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:55.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:55.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:22:55.107Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:22:55.108Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:22:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:22:55.109Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:22:55.109Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:05.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:05.103Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:05.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:05.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:05.104Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:23:05.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:05.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:23:05.107Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:23:05.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:08.875Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:23:15.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:15.105Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:15.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:15.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:23:15.106Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:23:15.107Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:15.107Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:23:15.108Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:23:15.108Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:23:22.553Z	[34mINFO[0m	logger/logger.go:49	Shutting down server...
+2026-05-19T14:23:22.554Z	[34mINFO[0m	logger/logger.go:49	Server exited gracefully
+2026-05-19T14:30:08.275Z	[34mINFO[0m	logger/logger.go:49	Starting application	{"env": "development", "port": ":8080"}
+2026-05-19T14:30:08.288Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:30:08.288Z	[34mINFO[0m	logger/logger.go:49	Server starting	{"port": ":8080"}
+2026-05-19T14:30:09.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:09.106Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:09.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:09.107Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:09.107Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:09.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:09.110Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:09.110Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:09.111Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:15.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:15.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:15.105Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:15.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:15.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:15.106Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:15.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:23.289Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:30:25.105Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:25.106Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:25.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:25.106Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:25.106Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:25.109Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:25.109Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:25.109Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:25.109Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:35.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:35.102Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:35.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:35.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:35.103Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:35.105Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:35.105Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:35.105Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:35.106Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:38.287Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:30:45.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:45.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:45.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:45.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:45.104Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:45.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:45.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:45.106Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:45.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:53.288Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:30:55.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:55.104Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:55.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:55.104Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:30:55.105Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:30:55.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:30:55.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:30:55.107Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:30:55.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:05.100Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:05.100Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:05.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:05.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:05.101Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:31:05.103Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:05.103Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:31:05.104Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:31:05.104Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:08.285Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:31:15.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:15.103Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:15.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:15.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:15.103Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:31:15.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:15.106Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:31:15.107Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:31:15.107Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:23.287Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:31:25.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:25.102Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:25.102Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:25.103Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:25.103Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:31:25.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:25.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:31:25.104Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:31:25.105Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:35.098Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:35.099Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:35.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:35.099Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:35.099Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:31:35.102Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:35.102Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:31:35.102Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:31:35.102Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:38.283Z	[34mINFO[0m	logger/logger.go:49	Start Update Top User
+2026-05-19T14:31:45.100Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:45.101Z	[34mINFO[0m	logger/logger.go:49	[OFFICIAL] IP in whitelist	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:45.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:45.101Z	[34mINFO[0m	logger/logger.go:49	New request	{"IP": "172.25.0.12", "path": "/metrics", "X-Proxy-Key": "secret-key"}
+2026-05-19T14:31:45.101Z	[34mINFO[0m	logger/logger.go:49	Start cache	{"Path": "/metrics"}
+2026-05-19T14:31:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit check	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Rate limit stats	{"ip": "172.25.0.12", "path": "/metrics", "status": 200, "request_size": 0, "response_size": 0}
+2026-05-19T14:31:45.104Z	[35mDEBUG[0m	logger/logger.go:45	Connection released	{"ip": "172.25.0.12"}
+2026-05-19T14:31:45.104Z	[34mINFO[0m	logger/logger.go:49	[UNKNOWN] IP not in any list	{"ip": "172.25.0.12", "path": "/metrics"}
+2026-05-19T14:31:50.486Z	[34mINFO[0m	logger/logger.go:49	Shutting down server...
+2026-05-19T14:31:50.489Z	[34mINFO[0m	logger/logger.go:49	Server exited gracefully

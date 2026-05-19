@@ -35,6 +35,7 @@ type CacheConfig struct {
 	TTL5xx time.Duration `json:"ttl_5xx"`
 
 	CacheMethods []string `json:"cache_methods"`
+	NotCacheURL  []string `json:"not_cache_url"`
 
 	RespectNoCache bool `json:"respect_no_cache"`
 	RespectMaxAge  bool `json:"respect_max_age"`

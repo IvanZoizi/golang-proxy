@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
+	"proxy/internal/dto"
 	"testing"
 	"time"
 
@@ -39,6 +40,12 @@ func (m *mockCacheUseCase) GetCacheStats() (*repository.CacheStats, error) {
 }
 func (m *mockCacheUseCase) GetCacheKey(req *http.Request) string { return "test-key" }
 func (m *mockCacheUseCase) CheckMethod(method string) bool       { return method == "GET" }
+func (m *mockCacheUseCase) UpdateConfigCache(req dto.UpdateCacheConfigRequest) error {
+	return nil
+}
+func (m *mockCacheUseCase) CheckNotCacheMethod(path string) (bool, error) {
+	return false, nil
+}
 
 func init() {
 	gin.SetMode(gin.TestMode)
